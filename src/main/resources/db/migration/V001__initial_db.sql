@@ -5,7 +5,7 @@ create table if not exists product(
     category varchar(36),
     count integer,
     price numeric,
-    priceSale numeric,
+    price_sale numeric,
     is_sale_active boolean
 );
 

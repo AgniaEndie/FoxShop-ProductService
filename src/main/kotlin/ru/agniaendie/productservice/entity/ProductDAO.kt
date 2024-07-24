@@ -12,6 +12,7 @@ data class ProductDAO(
     var category: String,
     var count: Int,
     var price: Double,
+    @Column(name="price_sale")
     var priceSale: Double?,
     @Column(name = "is_sale_active")
     var isSaleActive: Boolean
