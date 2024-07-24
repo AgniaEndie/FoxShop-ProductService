@@ -1,4 +1,3 @@
 package ru.agniaendie.productservice.exception
 
-class ProductCreationException(message: String) : RuntimeException(message)  {
-}
+class ProductCreationException(message: String) : RuntimeException(message)

@@ -1,4 +1,3 @@
 package ru.agniaendie.productservice.exception
 
-class JwtValidationFailedException( override val message: String? ) : RuntimeException(message) {
-}
+class JwtValidationFailedException( override val message: String? ) : RuntimeException(message)

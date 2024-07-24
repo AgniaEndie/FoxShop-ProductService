@@ -25,7 +25,7 @@ class ProductService(@Autowired var repository: IProductRepository, @Autowired v
         if (resultProduct != null) {
             return mapper.fromProductDAO(resultProduct)
         } else {
-            throw ProductNotFoundException("Product with id: ${id} not found")
+            throw ProductNotFoundException("Product with id: $id not found")
         }
     }
 

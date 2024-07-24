@@ -1,4 +1,3 @@
 package ru.agniaendie.productservice.exception
 
-class ProductDeleteException(message:String): RuntimeException(message) {
-}
+class ProductDeleteException(message:String): RuntimeException(message)
