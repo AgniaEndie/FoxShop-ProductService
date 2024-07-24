@@ -19,4 +19,4 @@ RUN gradle bootJar
 
 FROM eclipse-temurin:21 as production
 COPY --from=build /tmp/build/libs/ProductService-0.0.1-SNAPSHOT.jar .
-ENTRYPOINT ["java", "-Xms256M", "-Xmx512M","-jar","ProductService-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar","ProductService-0.0.1-SNAPSHOT.jar"]
