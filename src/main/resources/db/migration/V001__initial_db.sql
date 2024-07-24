@@ -6,7 +6,7 @@ create table if not exists product(
     count integer,
     price numeric,
     priceSale numeric,
-    isSaleActive boolean
+    is_sale_active boolean
 );
 
 create index if not exists product_title_index on product(title)
