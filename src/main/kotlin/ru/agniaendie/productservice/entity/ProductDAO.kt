@@ -6,7 +6,7 @@ import jakarta.persistence.*
 @Table(name = "product")
 data class ProductDAO(
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Id var uuid: String,
+    @Id var uuid: String?,
     var title: String,
     var description: String,
     var category: String,
