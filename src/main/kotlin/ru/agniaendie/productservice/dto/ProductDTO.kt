@@ -1,6 +1,8 @@
 package ru.agniaendie.productservice.dto
 
-data class ProductDTO(
+import java.io.Serializable
+
+data class ProductDTO (
     var uuid:String?,
     var title:String,
     var description:String,
@@ -9,4 +11,4 @@ data class ProductDTO(
     var price: Double,
     var priceSale: Double?,
     var isSaleActive: Boolean
-)
+): Serializable
