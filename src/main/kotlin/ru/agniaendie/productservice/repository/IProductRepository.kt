@@ -5,5 +5,5 @@ import ru.agniaendie.productservice.entity.ProductDAO
 
 interface IProductRepository : JpaRepository<ProductDAO, String> {
     fun findProductDAOByUuid(uuid: String): ProductDAO?
-    fun deleteProductDAOByUuid(uuid: String)
+    fun removeProductDAOByUuid(uuid:String)
 }

@@ -51,7 +51,7 @@ class ProductService(@Autowired var repository: IProductRepository, @Autowired v
 
     fun deleteProduct(id: String) {
         try {
-            repository.deleteProductDAOByUuid(id)
+            repository.removeProductDAOByUuid(id)
         } catch (e: Exception) {
             logger.error("Product deletion error: ${e.message}")
             throw ProductDeleteException("Product deletion error: ${e.message}")
