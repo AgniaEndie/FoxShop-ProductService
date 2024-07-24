@@ -2,6 +2,7 @@ package ru.agniaendie.productservice.service
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 import ru.agniaendie.productservice.dto.ProductDTO
 import ru.agniaendie.productservice.exception.ProductCreationException
 import ru.agniaendie.productservice.exception.ProductDeleteException
@@ -38,7 +39,7 @@ class ProductService(@Autowired var repository: IProductRepository, @Autowired v
             throw ProductCreationException("Product creation error: ${e.message}")
         }
     }
-
+    @Transactional
     fun updateProduct(productDTO: ProductDTO): ProductDTO {
         try {
             val updatedProduct = repository.save(mapper.fromProductDTO(productDTO))
@@ -48,7 +49,7 @@ class ProductService(@Autowired var repository: IProductRepository, @Autowired v
             throw ProductUpdateException("Product update error: ${e.message}")
         }
     }
-
+    @Transactional
     fun deleteProduct(id: String) {
         try {
             repository.removeProductDAOByUuid(id)
