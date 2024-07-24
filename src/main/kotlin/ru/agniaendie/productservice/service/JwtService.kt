@@ -23,10 +23,10 @@ class JwtService(
             val extractedClaims = extractAllClaims(authToken)
             val currentTime = LocalDateTime.now().atZone(ZoneId.of(zoneId)).toInstant()
             if(extractedClaims["exp"] is Long){
-                //logger.error("true ${extractedClaims["exp"]} ${extractedClaims["exp"].toString().toLong() < currentTime.toEpochMilli()}")
+                logger.error("true ${extractedClaims["exp"]} ${extractedClaims["exp"].toString().toLong() < currentTime.toEpochMilli()}")
                 return extractedClaims["exp"].toString().toLong() < currentTime.toEpochMilli()
             }else{
-                //logger.error("false ${extractedClaims["exp"]} ${extractedClaims["exp"].toString().toLong() > currentTime.toEpochMilli()}")
+                logger.error("false ${extractedClaims["exp"]} ${extractedClaims["exp"].toString().toLong() > currentTime.toEpochMilli()}")
                 return false
             }
         } catch (e: JwtValidationFailedException) {
