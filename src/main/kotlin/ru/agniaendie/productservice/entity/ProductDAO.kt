@@ -3,7 +3,7 @@ package ru.agniaendie.productservice.entity
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "Product")
+@Table(name = "product")
 data class ProductDAO(
     @GeneratedValue(strategy = GenerationType.UUID)
     @Id var uuid: String,
